@@ -24,7 +24,8 @@ namespace loggingTest2
         {
             loggerFactory
                 .AddConsole()
-                .AddDebug();
+                .AddDebug()
+                .AddFile("output.log");
 
             if (env.IsDevelopment())
             {
