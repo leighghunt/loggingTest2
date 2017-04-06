@@ -33,6 +33,9 @@ namespace loggingTest2
 
             app.Run(async (context) =>
             {
+                ILogger logger = loggerFactory.CreateLogger("TEST");
+                logger.LogInformation("Hello from logger.");
+
                 await context.Response.WriteAsync("Hello World!");
             });
         }
